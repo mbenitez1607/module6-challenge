@@ -4,25 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/sytle.css">
+    <!-- Link to Bootstrap's CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Weather Dashboard</title>
 </head>
 <body>
     <header>
-        <h1>Weather Dashboard</h1>
+        <!-- Navbar -->
+        <div class="col-12 col-md-12 mb-3 p-3 bg-white rounded">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+              <h1 class="navbar-brand title" href="#">Weather Dashboard</h1>
+            </nav>
+        </div>  
     </header>
-    <main>
-        <div>
-            <h2>Search for a City:</h2>
-            <form>
-                <input type="text" name="city">
-                <button>Search</button>
-            </form>
-
+    <main class="container">
+        <div class="row">
+            <div class="col-4">
+                <h2 class="city-search">Search for a City:</h2>
+                <form>
+                    <input type="text" id="cityInput" placeholder="Toronto">
+                    <button type="button" id="search" class="btn btn-primary btn-md search">Search</button>
+                </form>
+            </div>
+            <section class="col-8">
+                <div class="container">
+                    <h2 class="city-search">Current city</h2>
+                </div>
+                <div class="container">
+                    <h3 class="city-search long-forecast">5-Day Forecast:</h3>
+                </div>
+            </section>
         </div>
-        <section>
-            <h2>Current city</h2>
-            <h3>5-Day Forecast:</h3>
-        </section>
     </main>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
