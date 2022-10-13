@@ -20,7 +20,8 @@ var excludeParams = "current,minutely,hourly,alerts";
 function saveCity(newCity) {
     cities.push(newCity); // Add the city name to the cities array
     // Store cities array in local storage
-    localStorage.setItem("Searched",JSON.stringify(cities)); 
+    localStorage.setItem("Searched",JSON.stringify(cities));
+    var cityHistory; 
 }
 
 // Function to create h4 elements to display temperature, wind, and humidity 
